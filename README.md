@@ -1,6 +1,6 @@
 # final-dix-sept-erledigt
-2017 Final Team Project
+2020 Final Team Project
 
-Check the wiki for details and team pages.
- $
-ok this is aarushi trying to do a commit(??) But uh hi im aarushi singh and i really like potatoes. also im doing the maze part for our game. 
+(Say your name and what thing you're doing in the project)
+
+Omg hi this is aarushi and im trying to figure out how commits work but im pretty sure this is how you do it. Also Im doing the maze part in our game! 
