@@ -2,6 +2,8 @@ package memoryGame;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 import javax.swing.*;
 
@@ -30,31 +32,16 @@ public class MemoryGame implements ActionListener {
 	private static JLabel finalSay2;
 	private static JLabel finalSay3;
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, FileNotFoundException {
 
 		allWords = new ArrayList<String>();
-		allWords.add("pineapple");
-		allWords.add("timer");
-		allWords.add("advanced");
-		allWords.add("mouse");
-		allWords.add("consequence");
-		allWords.add("review");
-		allWords.add("abstraction");
-		allWords.add("juvenile");
-		allWords.add("guarantee");
-		allWords.add("quantum");
-		allWords.add("suggestion");
-		allWords.add("injury");
-		allWords.add("procrastination");
-		allWords.add("calculator");
-		allWords.add("standard");
-		allWords.add("frame");
-		allWords.add("condition");
-		allWords.add("injury");
-		allWords.add("scan");
-		allWords.add("shepard");
-		allWords.add("injury");
-
+		
+		Scanner input = new Scanner(new File("wordList.txt"));
+		while (input.hasNext()) {
+			String word = input.next();
+			allWords.add(word);
+		}
+		
 		repeat = new ArrayList<String>();
 
 		words = new ArrayList<String>();
@@ -127,7 +114,7 @@ public class MemoryGame implements ActionListener {
 		dialog15.setBounds(10, 110, 500, 25);
 		panel.add(dialog15);
 
-		JLabel dialog16 = new JLabel("If you get at least 8 words, you will get the shell");
+		JLabel dialog16 = new JLabel("If you get at least 8 words correct, you will get the shell");
 		dialog16.setBounds(10, 135, 500, 25);
 		panel.add(dialog16);
 
@@ -211,20 +198,20 @@ public class MemoryGame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 
 		if (e.getSource() == startTheGameButton) {
-			while (words.size() < 15) {
-				int i = 0;
-				while (i < allWords.size()) {
-					if (words.contains(allWords.get(i))) {
-						i++;
-					} else {
-						int yesOrNo = 0;
-						yesOrNo = (int)(Math.random() * 2);
-						if (yesOrNo == 0) {
-							words.add(allWords.get(i));
-						}
-						i++;
+			int[] indexes = new int[15];
+			indexes[0] = (int)(Math.random() * 10000) + 1;
+			for (int i = 1; i < indexes.length; i++) {
+				indexes[i] = (int)(Math.random() * 10000) + 1;
+				for (int j = 0; j < i; j++) {
+					if (indexes[i] == indexes[j]) {
+						indexes[i] = (int)(Math.random() * 10000) + 1;
+						j--;
 					}
 				}
+			}
+			
+			for (int i = 0; i < 15; i++) {
+				words.add(allWords.get(indexes[i]));
 			}
 			listOfWords.setText(Arrays.toString(words.toArray()));
 
