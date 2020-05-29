@@ -61,7 +61,7 @@ public class MemoryGame implements ActionListener {
 
 		panel = new JPanel();
 		JFrame frame = new JFrame();
-		frame.setSize(1000, 800);
+		frame.setSize(1400, 800);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(panel);
 
@@ -247,11 +247,12 @@ public class MemoryGame implements ActionListener {
 					success.setText("Number of correct things: " + count);
 					words.remove(word);
 					getIt.setText("Successful!");
+					repeat.add(user);
 					return;
 				}
-				repeat.add(user);
 			}
-			getIt.setText("You did NOT get it!");
+			repeat.add(user);
+			getIt.setText("Failed!");
 		} else if (e.getSource() == doneMemorizing) {
 			listOfWords.setVisible(false);
 			doneMemorizing.show(false);
