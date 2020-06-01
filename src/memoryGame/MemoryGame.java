@@ -323,6 +323,8 @@ public class MemoryGame implements ActionListener {
 			getIt.show(true);
 			done.show(true);
 		} else if (e.getSource() == done) {
+			task.cancel();
+			
 			checkButton.show(false);
 			done.show(false);
 			success.show(false);
