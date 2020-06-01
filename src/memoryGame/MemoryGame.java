@@ -122,7 +122,7 @@ public class MemoryGame implements ActionListener {
 		dialog17.setBounds(10, 160, 1000, 25);
 		panel.add(dialog17);
 
-		JLabel dialog18= new JLabel("Good Luck");
+		JLabel dialog18= new JLabel("Good Luck, and remember you are running out of time! Timer will start once you start the game");
 		dialog18.setBounds(10, 185, 500, 25);
 		panel.add(dialog18);
 
@@ -153,14 +153,14 @@ public class MemoryGame implements ActionListener {
 		panel.add(userText);
 		userText.show(false);
 
-		checkButton = new JButton("Check");
-		checkButton.setBounds(245, 345, 100, 35);
+		checkButton = new JButton("Check if I memorized correctly");
+		checkButton.setBounds(245, 345, 250, 35);
 		checkButton.addActionListener(new MemoryGame());
 		panel.add(checkButton);
 		checkButton.show(false);
 		
-		done = new JButton("Done");
-		done.setBounds(345, 345, 100, 35);
+		done = new JButton("Done spitting out what I have in my brain");
+		done.setBounds(495, 345, 300, 35);
 		done.addActionListener(new MemoryGame());
 		panel.add(done);
 		done.show(false);
