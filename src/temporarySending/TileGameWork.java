@@ -1,4 +1,4 @@
-package tileWorkGame;
+package temporarySending;
 
 public class TileGameWork {
 
@@ -85,7 +85,7 @@ public class TileGameWork {
 						output[i][j] = changed[i-1][j];
 						output[i-1][j] = temp;
 					
-					}else if(j < changed[i].length && changed[i][j+1] == second) {
+					}else if(j < changed[i].length -1 && changed[i][j+1] == second) {
 						//look right
 						 temp = changed[i][j];
 						output[i][j] = changed[i][j+1];
