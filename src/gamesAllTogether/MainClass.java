@@ -1,10 +1,13 @@
 package gamesAllTogether;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class MainClass {
+public class MainClass implements ActionListener {
 	
 	private static JButton nextButton;
 	private static JPanel panel;
@@ -24,8 +27,20 @@ public class MainClass {
 
 		panel.setLayout(null);
 		
+		nextButton = new JButton("Next");
+		nextButton.setBounds(245, 345, 250, 35);
+		nextButton.addActionListener(new MainClass());
+		panel.add(nextButton);
+		
 		frame.setVisible(true);
 		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == nextButton) {
+			
+		}
 	}
 
 }
