@@ -1,0 +1,225 @@
+package learningarraylists;
+
+import java.awt.GridLayout;
+import java.awt.Rectangle;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Tictactoefinal implements ActionListener {
+	private JFrame frame = new JFrame();
+	private JPanel panel = new JPanel();
+	private XOButton buttons[] = new XOButton[9];
+	private JLabel numberlabel = new JLabel("Enter ur number (1-9):");
+	private JLabel numcheck = new JLabel("");
+	private JTextField number = new JTextField();
+	private JButton button1 = new JButton("");
+	private JButton button2 = new JButton("");
+	private JButton button3 = new JButton("");
+	private JButton button4 = new JButton("");
+	private JButton button5 = new JButton("");
+	private JButton button6 = new JButton("");
+	private JButton button7 = new JButton("");
+	private JButton button8 = new JButton("");
+	private JButton button9 = new JButton("");
+	private JButton sumbit = new JButton("Submit");
+	private int[] XO = { -1, -1, -1, -1, -1, -1, -1, -1, -1 };
+
+	public static void main(String args[]) {
+
+		new Tictactoefinal();
+		
+	}
+
+	public Tictactoefinal() {
+
+		frame = new JFrame();
+		panel = new JPanel();
+		Rectangle rect = new Rectangle(500, 700);
+		frame.setBounds(rect);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(panel);
+		panel.setLayout(null);
+		frame.setVisible(true);
+
+		numberlabel.setBounds(10, 470, 250, 25);
+		panel.add(numberlabel);
+		
+		numcheck.setBounds(10, 520, 500, 25);
+		panel.add(numcheck);
+
+		number.setBounds(200, 470, 100, 25);
+		panel.add(number);
+
+		sumbit.setBounds(250, 500, 100, 25);
+		sumbit.addActionListener(this);
+		panel.add(sumbit);
+
+		button1.setBounds(0, 0, 150, 150);
+		panel.add(button1);
+
+		button2.setBounds(152, 0, 150, 150);
+		panel.add(button2);
+
+		button3.setBounds(304, 0, 150, 150);
+		panel.add(button3);
+
+		button4.setBounds(0, 152, 150, 150);
+		panel.add(button4);
+
+		button5.setBounds(152, 152, 150, 150);
+		panel.add(button5);
+
+		button6.setBounds(304, 152, 150, 150);
+		panel.add(button6);
+
+		button7.setBounds(0, 304, 150, 150);
+		panel.add(button7);
+
+		button8.setBounds(152, 304, 150, 150);
+		panel.add(button8);
+
+		button9.setBounds(304, 304, 150, 150);
+		panel.add(button9);
+
+//		setSize(500,400);
+//		setResizable(false);
+//		setDefaultCloseOperation(EXIT_ON_CLOSE);
+//		button1.setBounds(0, 0,40,40);
+//		
+//		
+////		p.setLayout(new GridLayout(3,3));
+////		for(int i=0; i < 9; i++) {
+////			buttons[i]=new XOButton();
+////			p.add(buttons[i]);
+////		}
+//		add(panel);
+//		numberlabel.setBounds(10, 450, 320, 25);
+//		panel.add(numberlabel);
+//		panel.setLayout(null);
+//		setVisible(true);
+//		
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		// 0 is the player's X and 1 is the computer's O
+		
+		
+		
+		
+		String usernum = number.getText();
+		int arraynum = Integer.parseInt(usernum);
+		if (usernum.trim().equals("1")) {
+			if (checksubmitandcompin(arraynum) == true) {
+				button1.setText("X");
+				compint();	
+			}
+		} else if (usernum.trim().equals("2")) {
+			if (checksubmitandcompin(arraynum) == true) {
+				button2.setText("X");
+				compint();
+			}
+		} else if (usernum.trim().equals("3")) {
+			if (checksubmitandcompin(arraynum) == true) {
+				button3.setText("X");
+				compint();
+			}
+
+		} else if (usernum.trim().equals("4")) {
+			if (checksubmitandcompin(arraynum) == true) {
+				button4.setText("X");
+				compint();
+			}
+		} else if (usernum.trim().equals("5")) {
+			if (checksubmitandcompin(arraynum) == true) {
+				button5.setText("X");
+				compint();
+			}
+
+		} else if (usernum.trim().equals("6") ){
+			if (checksubmitandcompin(arraynum) == true) {
+				button6.setText("X");
+				compint();
+			}
+		} else if (usernum.trim().equals("7")) {
+			if (checksubmitandcompin(arraynum) == true) {
+				button7.setText("X");
+				compint();
+			}
+		} else if (usernum.trim().equals("8")) {
+			if (checksubmitandcompin(arraynum) == true) {
+				button8.setText("X");
+				compint();
+			}
+		} else if (usernum.trim().equals("9")) {
+			if (checksubmitandcompin(arraynum) == true) {
+				button9.setText("X");
+				compint();
+			}
+		}
+
+	}
+
+	public boolean checksubmitandcompin(int num) {
+		if (XO[num - 1] == -1) {
+			XO[num - 1] = 0;
+			return true;
+		}
+		
+		numcheck.setText("That Number has aldready been filled. Please reenter you number");
+		return false;
+		
+
+	}
+	public void compint() {
+		int n = (int) Math.random()*9;
+		if (n==1) {
+			if (checksubmitandcompin(n) == true) {
+				button1.setText("O");
+			}
+		} else if (n==2) {
+			if (checksubmitandcompin(n) == true) {
+				button2.setText("O");
+			}
+		}else if (n==3) {
+			if (checksubmitandcompin(n) == true) {
+				button3.setText("O");
+			}
+		} else if (n==4) {
+			if (checksubmitandcompin(n) == true) {
+				button4.setText("O");
+			}
+		} else if (n==5) {
+			if (checksubmitandcompin(n) == true) {
+				button5.setText("O");
+			}
+		} else if (n==6) {
+			if (checksubmitandcompin(n) == true) {
+				button6.setText("O");
+			}
+		} else if (n==7) {
+			if (checksubmitandcompin(n) == true) {
+				button7.setText("O");
+			}
+		} else if (n==8) {
+			if (checksubmitandcompin(n) == true) {
+				button8.setText("O");
+			}
+		} else if (n==9) {
+			if (checksubmitandcompin(n) == true) {
+				button9.setText("O");
+			}
+		} 
+		
+		
+	}
+
+}
