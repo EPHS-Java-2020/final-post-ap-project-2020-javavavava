@@ -11,21 +11,31 @@ public class MainClass implements ActionListener {
 	
 	private static JButton nextButton;
 	private static JPanel panel;
+	
+//	private static int currLevel = 0;
 
 	public static void main(String[] args) {
 		
 		TitlePage titlePage = new TitlePage();
 		MemoryGame memoryGame = new MemoryGame();
 		RiddleGame riddleGame = new RiddleGame();
-		TicTacToe ticTacToe = new TicTacToe();
+		TicTacToeGame ticTacToe = new TicTacToeGame();
+		TileGame tileGame = new TileGame();
 
 		panel = new JPanel();
 		JFrame frame = new JFrame();
-		frame.setSize(1400, 800);
+		frame.setSize(2000, 800);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(panel);
 
 		panel.setLayout(null);
+		
+//		if (currLevel == 0) {
+//			titlePage.setVisible(true);
+//		} else if (currLevel == 1 && !(titlePage.isRunning())) {
+//			titlePage.dispose();
+//		}
+		
 		
 		nextButton = new JButton("Next");
 		nextButton.setBounds(245, 345, 250, 35);
@@ -39,7 +49,7 @@ public class MainClass implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == nextButton) {
-			
+//			currLevel++;
 		}
 	}
 

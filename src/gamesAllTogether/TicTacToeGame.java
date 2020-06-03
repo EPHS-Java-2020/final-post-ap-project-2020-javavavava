@@ -8,13 +8,16 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
-public class TicTacToe extends JFrame {
+public class TicTacToeGame extends JFrame {
+	
+	public boolean running = false;
+	
 	JPanel p=new JPanel();
 	practice buttons[]=new practice[9];
 	static ArrayList<Integer> playerPositions = new ArrayList<Integer>();
 	static ArrayList<Integer> siriPositions = new ArrayList<Integer>();
 
-	public TicTacToe() {
+	public TicTacToeGame() {
 		super("TicTacToe");
 		setSize(400,400);
 		setResizable(false);
@@ -28,7 +31,7 @@ public class TicTacToe extends JFrame {
 		setVisible(true);
 	}
 	public static void main(String[] args) {
-		new TicTacToe();
+		new TicTacToeGame();
 		char[] [] gameBoard = {{' ', '|', ' ', '|', ' '},
 				{'-', '+', '-', '+', '-'},
 				{' ', '|', ' ', '|', ' '},
@@ -159,6 +162,10 @@ public class TicTacToe extends JFrame {
 
 
 		return "";
+	}
+	
+	public boolean isRunning() {
+		return running;
 	}
 
 }
