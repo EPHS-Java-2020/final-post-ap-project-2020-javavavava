@@ -1,6 +1,6 @@
-package tileWorkGame;
+package temporarySending;
 import java.util.Scanner;
-public class ApplictionLauncher {
+public class AppLauncher {
 
 	public static void main(String[] args) {
 		TileGameWork printer = new TileGameWork();
@@ -23,6 +23,16 @@ public class ApplictionLauncher {
 		int nameFirst = numberSwitcherFirst.nextInt();
 		int nameSecond = numberSwitcherSecond.nextInt();
 		printer.switcher(nameFirst, nameSecond);
+		while(nameFirst != 0) {
+			 nameFirst = numberSwitcherFirst.nextInt();
+			 nameSecond = numberSwitcherSecond.nextInt();
+			printer.switcher(nameFirst, nameSecond);
+		}
+		if(printer.checker() == true) {
+			System.out.print("You win!");
+		}else {
+			System.out.println("You lose. Try again.");
+		}
 		
 	}
 	
