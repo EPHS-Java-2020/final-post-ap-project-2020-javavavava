@@ -15,11 +15,11 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+import Game.StartScreenHandler;
+
 
 public class TitlePage extends JFrame {
 	
-	public boolean running = true;
-
 	JLabel L1;
 
 	JFrame window;
@@ -33,13 +33,13 @@ public class TitlePage extends JFrame {
 	JTextArea startScreenText;
 	JTextField jt = new JTextField();
 	StartScreenHandler a = new StartScreenHandler(); 
-
-
+	
+	
 	public TitlePage() {
-
+		
 		window = new JFrame();
 		window.setTitle("Jumanjee 5");
-		window.setSize(1400, 800);
+		window.setSize(800, 600);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setContentPane(new JLabel(new ImageIcon("Game.jpg")));
 		window.setLayout(new FlowLayout());
@@ -48,48 +48,48 @@ public class TitlePage extends JFrame {
 		window.setLayout(null);
 		window.setVisible(true);
 		con = window.getContentPane();
-
+		
 		titleNamePanel = new JPanel();
 		titleNamePanel.setBounds(385, 100, 575, 150);
 		titleNamePanel.setBackground(Color.YELLOW);
 		titleNameLabel = new JLabel("Jumanjee 5");
 		titleNameLabel.setForeground(Color.RED);
 		titleNameLabel.setFont(titleButtonFont);
-
+		
 		startButtonPanel = new JPanel();
 		startButtonPanel.setBounds(575, 500 , 215, 55);
 		startButtonPanel.setBackground(Color.YELLOW);
-
+		
 		startButton = new JButton("Start");
 		startButton.setBackground(Color.YELLOW);
 		startButton.setForeground(Color.RED);
 		startButton.setFont(startButtonFont);
 		startButton.addActionListener(a);
-
+		
 		titleNamePanel.add(titleNameLabel);
 		con.add(titleNamePanel);
 		startButtonPanel.add(startButton);
 		con.add(startButtonPanel);
 		window.setVisible(true);
-
-
+		
+		
 	}
 
 	public static void main (String[] args) {
-
+		
 		new TitlePage();
 	}
-
+	
 	public void startScreen( ) {
-
+		
 		titleNamePanel.setVisible(false);
 		startButtonPanel.setVisible(false); 
-
+		
 		startScreenPanel = new JPanel();
 		startScreenPanel.setBounds(100, 100, 800, 250);
 		startScreenPanel.setBackground(Color.yellow );
 		con.add(startScreenPanel);
-
+		
 		startScreenText = new JTextArea("\"Hello There\" Welcome to Jumanjee 5 where this time it is underwater\n"
 				+ "You were going to a trip and then now you are stuck in an ocean because your submarine has sunk.\n"
 				+ "In order to escape the ocean you need to complete a series of tasks given.\n"
@@ -103,32 +103,24 @@ public class TitlePage extends JFrame {
 		startScreenText.setLineWrap(true);
 		startScreenPanel.add(startScreenText);
 		startScreenText.setEditable(false);
-
+		
 		goButtonPanel = new JPanel();
 		goButtonPanel.setBounds(685, 400, 215, 55);
 		goButtonPanel.setBackground(Color.YELLOW);
 		con.add(goButtonPanel);
-
+		
 		goButton = new JButton("Let's Go");
 		goButton.setBackground(Color.YELLOW);
 		goButton.setForeground(Color.RED);
 		goButton.setFont(startButtonFont);
 		goButtonPanel.add(goButton);
 	}
-
-	public class StartScreenHandler implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
-			if (e.getSource() == startButton) {
-				startScreen();
-			} else if (e.getSource() == goButton) {
-				running = false;
-			}
-
-		}
-	}
 	
-	public boolean isRunning() {
-		return running;
+	public class StartScreenHandler implements ActionListener {
+		public void actionPerformed(ActionEvent event) {
+			startScreen();
+			
+		}
 	}
 
 

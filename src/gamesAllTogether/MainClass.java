@@ -32,7 +32,7 @@ public class MainClass implements ActionListener {
 		
 		if (currLevel == 0) {
 			titlePage.setVisible(true);
-		} else if (currLevel == 1 && !(titlePage.isRunning())) {
+		} else if (currLevel == 1) {
 			titlePage.dispose();
 		}
 		

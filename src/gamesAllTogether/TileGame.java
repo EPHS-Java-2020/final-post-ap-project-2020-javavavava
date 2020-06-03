@@ -1,8 +1,6 @@
 package gamesAllTogether;
 
 public class TileGame {
-	
-	public boolean running = false;
 
 	private int[][] original = { {1, 2, 3}, 
 							   {4, 5, 6},
@@ -116,9 +114,5 @@ public class TileGame {
 			}
 		}
 		return false;
-	}
-	
-	public boolean isRunning() {
-		return running;
 	}
 }

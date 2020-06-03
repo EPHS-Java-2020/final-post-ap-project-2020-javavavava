@@ -17,8 +17,6 @@ import javax.swing.JTextField;
 
 public class RiddleGame implements ActionListener ,KeyListener{
 	
-	public boolean running = false;
-	
 	//timer 
 	private static int sec =01;
 	private static int min = 02;
@@ -221,10 +219,6 @@ public class RiddleGame implements ActionListener ,KeyListener{
 		questionnolabel.setText("Question number: "+(quesnumber+1));
 		question.setText("Question: "+Riddles[quesnumber]);
 		answer.setText("");
-	}
-	
-	public boolean isRunning() {
-		return running;
 	}
 
 

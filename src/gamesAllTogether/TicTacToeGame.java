@@ -10,8 +10,6 @@ import java.util.Random;
 import java.util.Scanner;
 public class TicTacToeGame extends JFrame {
 	
-	public boolean running = false;
-	
 	JPanel p=new JPanel();
 	practice buttons[]=new practice[9];
 	static ArrayList<Integer> playerPositions = new ArrayList<Integer>();
@@ -162,10 +160,6 @@ public class TicTacToeGame extends JFrame {
 
 
 		return "";
-	}
-	
-	public boolean isRunning() {
-		return running;
 	}
 
 }

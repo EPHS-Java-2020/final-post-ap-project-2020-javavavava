@@ -13,8 +13,6 @@ import java.util.Timer;
 import java.util.concurrent.TimeUnit;
 
 public class MemoryGame implements ActionListener {
-	
-	public boolean running = false;
 
 	// timer
 	// timer
@@ -348,10 +346,6 @@ public class MemoryGame implements ActionListener {
 			finalSay3.show(true);
 		}
 
-	}
-	
-	public boolean isRunning() {
-		return running;
 	}
 
 }
