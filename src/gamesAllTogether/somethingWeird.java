@@ -36,8 +36,6 @@ public class somethingWeird implements ActionListener, KeyListener {
 	public static void main(String[] args) throws FileNotFoundException, InterruptedException {
 		titlePage();
 	}
-	public static boolean isMemoryGameRunning = false;
-	public static boolean isMRiddleGameRunning = false;
 	public static JButton nextButton;
 	public static int currLevel = 0;
 
