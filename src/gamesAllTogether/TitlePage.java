@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import Game.StartScreenHandler;
+//import Game.StartScreenHandler;
 
 
 public class TitlePage extends JFrame {

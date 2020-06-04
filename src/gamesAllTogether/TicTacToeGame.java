@@ -1,6 +1,7 @@
 package gamesAllTogether;
 
 import javax.swing.JPanel;
+
 import javax.swing.JFrame;
 import java.awt.GridLayout;
 import java.util.ArrayList;
@@ -8,8 +9,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+
 public class TicTacToeGame extends JFrame {
-	
+
 	JPanel p=new JPanel();
 	practice buttons[]=new practice[9];
 	static ArrayList<Integer> playerPositions = new ArrayList<Integer>();
