@@ -627,7 +627,7 @@ public class somethingWeird implements ActionListener, KeyListener {
 
 	}
 
-	public static void checksubmit() {
+	public static void checksubmit() {//RiddleGame
 		String text = answer.getText();
 
 		if(text.toLowerCase().trim().equals(answers[quesnumber])) {
@@ -650,11 +650,13 @@ public class somethingWeird implements ActionListener, KeyListener {
 				successRiddle.setText("YEAH, YOU WON THE GAME!!");
 				timerRiddle.cancel();
 				timeRiddle.setVisible(false);
+				nextButton.setVisible(true);
 			}else {
 				successRiddle.setText("SORRY, YOU LOST THE GAME");
+				timeRiddle.setVisible(false);
 			}
 			timerRiddle.cancel();
-			nextButton.setVisible(true);
+			
 		}else {
 			quesnumber++;	
 		}
