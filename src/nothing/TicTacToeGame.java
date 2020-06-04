@@ -226,7 +226,7 @@ public class TicTacToeGame implements ActionListener {
 		button16.addActionListener(new TicTacToeGame());
 		panelTTT.add(button16);
 		
-		instru1 = new JLabel("You are the Player 1. Your buddy is the Player 2. Player 1 should win.");
+		instru1 = new JLabel("You are Player 1. Your buddy is Player 2. Player 1 should win.");
 		instru2 = new JLabel("If Player1 loses, you won't get the shell. BUT, if your buddy wins, well... your buddy is smarter than ya.");
 		instru1.setBounds(10, 614, 1000, 25);
 		instru2.setBounds(10, 639, 1000, 25);

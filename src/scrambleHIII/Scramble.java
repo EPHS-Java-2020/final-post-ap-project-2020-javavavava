@@ -1,5 +1,4 @@
-//BAHAHAHA IM FUCKING DONE THIS TOOK ME ME FUCKING 12 sHOURS REEEEE
-package org.edenpr.ephs.scramble;
+package scrambleHIII;
 
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
