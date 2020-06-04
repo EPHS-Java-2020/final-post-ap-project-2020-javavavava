@@ -27,6 +27,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import gamesAllTogether.TitlePage.StartScreenHandler;
+import nothing.TicTacToeGame;
 
 
 
@@ -40,6 +41,307 @@ public class somethingWeird implements ActionListener, KeyListener {
 	public static JButton nextButton;
 	public static int currLevel = 0;
 
+
+
+	// ticTacToeGame
+	public static boolean isPlayer1 = true;
+	public static boolean gameEnded = false;
+
+	public static JButton button1;
+	public static JButton button2;
+	public static JButton button3;
+	public static JButton button4;
+	public static JButton button5;
+	public static JButton button6;
+	public static JButton button7;
+	public static JButton button8;
+	public static JButton button9;
+	public static JButton button10;
+	public static JButton button11;
+	public static JButton button12;
+	public static JButton button13;
+	public static JButton button14;
+	public static JButton button15;
+	public static JButton button16;
+
+	public static boolean isClickedbutton1 = false;
+	public static boolean isClickedbutton2 = false;
+	public static boolean isClickedbutton3 = false;
+	public static boolean isClickedbutton4 = false;
+	public static boolean isClickedbutton5 = false;
+	public static boolean isClickedbutton6 = false;
+	public static boolean isClickedbutton7 = false;
+	public static boolean isClickedbutton8 = false;
+	public static boolean isClickedbutton9 = false;
+	public static boolean isClickedbutton10 = false;
+	public static boolean isClickedbutton11 = false;
+	public static boolean isClickedbutton12 = false;
+	public static boolean isClickedbutton13 = false;
+	public static boolean isClickedbutton14 = false;
+	public static boolean isClickedbutton15 = false;
+	public static boolean isClickedbutton16 = false;
+
+	// 1 is Player 1. 2 is Player 2.
+	public static int XObutton1 = 0;
+	public static int XObutton2 = 0;
+	public static int XObutton3 = 0;
+	public static int XObutton4 = 0;
+	public static int XObutton5 = 0;
+	public static int XObutton6 = 0;
+	public static int XObutton7 = 0;
+	public static int XObutton8 = 0;
+	public static int XObutton9 = 0;
+	public static int XObutton10 = 0;
+	public static int XObutton11 = 0;
+	public static int XObutton12 = 0;
+	public static int XObutton13 = 0;
+	public static int XObutton14 = 0;
+	public static int XObutton15 = 0;
+	public static int XObutton16 = 0;
+
+	public static JLabel whosturn;
+	public static JLabel resultTTT;
+	public static JLabel instru1;
+	public static JLabel instru2;
+
+	public static JPanel panelTTT;
+
+	public static void ticTacToeGame() {
+		panelTTT = new JPanel();
+		JFrame frameTTT = new JFrame("TicTacToe Game");
+		frameTTT.setSize(700, 750);
+		frameTTT.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frameTTT.add(panelTTT);
+
+		panelTTT.setLayout(null);
+
+		button1 = new JButton("");
+		button1.setBounds(10, 10, 150, 150);
+		button1.addActionListener(new somethingWeird());
+		panelTTT.add(button1);
+
+		button2 = new JButton("");
+		button2.setBounds(161, 10, 150, 150);
+		button2.addActionListener(new somethingWeird());
+		panelTTT.add(button2);
+
+		button3 = new JButton("");
+		button3.setBounds(312, 10, 150, 150);
+		button3.addActionListener(new somethingWeird());
+		panelTTT.add(button3);
+
+		button4 = new JButton("");
+		button4.setBounds(463, 10, 150, 150);
+		button4.addActionListener(new somethingWeird());
+		panelTTT.add(button4);
+
+		button5 = new JButton("");
+		button5.setBounds(10, 161, 150, 150);
+		button5.addActionListener(new somethingWeird());
+		panelTTT.add(button5);
+
+		button6 = new JButton("");
+		button6.setBounds(161, 161, 150, 150);
+		button6.addActionListener(new somethingWeird());
+		panelTTT.add(button6);
+
+		button7 = new JButton("");
+		button7.setBounds(312, 161, 150, 150);
+		button7.addActionListener(new somethingWeird());
+		panelTTT.add(button7);
+
+		button8 = new JButton("");
+		button8.setBounds(463, 161, 150, 150);
+		button8.addActionListener(new somethingWeird());
+		panelTTT.add(button8);
+
+		button9 = new JButton("");
+		button9.setBounds(10, 312, 150, 150);
+		button9.addActionListener(new somethingWeird());
+		panelTTT.add(button9);
+
+		button10 = new JButton("");
+		button10.setBounds(161, 312, 150, 150);
+		button10.addActionListener(new somethingWeird());
+		panelTTT.add(button10);
+
+		button11 = new JButton("");
+		button11.setBounds(312, 312, 150, 150);
+		button11.addActionListener(new somethingWeird());
+		panelTTT.add(button11);
+
+		button12 = new JButton("");
+		button12.setBounds(463, 312, 150, 150);
+		button12.addActionListener(new somethingWeird());
+		panelTTT.add(button12);
+
+		button13 = new JButton("");
+		button13.setBounds(10, 463, 150, 150);
+		button13.addActionListener(new somethingWeird());
+		panelTTT.add(button13);
+
+		button14 = new JButton("");
+		button14.setBounds(161, 463, 150, 150);
+		button14.addActionListener(new somethingWeird());
+		panelTTT.add(button14);
+
+		button15 = new JButton("");
+		button15.setBounds(312, 463, 150, 150);
+		button15.addActionListener(new somethingWeird());
+		panelTTT.add(button15);
+
+		button16 = new JButton("");
+		button16.setBounds(463, 463, 150, 150);
+		button16.addActionListener(new somethingWeird());
+		panelTTT.add(button16);
+
+		instru1 = new JLabel("You are the Player 1. Your buddy is the Player 2. Player 1 should win.");
+		instru2 = new JLabel("If Player1 loses, you won't get the shell. BUT, if your buddy wins, well... your buddy is smarter than ya.");
+		instru1.setBounds(10, 614, 1000, 25);
+		instru2.setBounds(10, 639, 1000, 25);
+		panelTTT.add(instru1);
+		panelTTT.add(instru2);
+		
+		whosturn = new JLabel("Player 1, please choose");
+		whosturn.setBounds(10, 670, 500, 25);
+		whosturn.setForeground(Color.RED);
+		panelTTT.add(whosturn);
+
+		////////
+		nextButton = new JButton("Next");
+		nextButton.setBounds(10, 655, 100, 35);
+		nextButton.addActionListener(new somethingWeird());
+		panelTTT.add(nextButton);
+		nextButton.setVisible(false);
+		////////
+
+		frameTTT.setVisible(true);
+	}
+
+	public static void change(JButton button) {
+		if (isFilled()) {
+			whosturn.setText(whoWon() + " won!!!!!!!!!!!!!!!");
+			if (whoWon().equals("Player 1")) {
+				nextButton.setVisible(true);
+				gameEnded = true;
+			} else if (whoWon().equals("Player 2")) {
+				nextButton.setVisible(false);
+				whosturn.setText(whoWon() + " won!!!!" + "SORRY, YOU LOST THE GAME");
+				gameEnded = true;
+			}
+		} else if (whoWon().equals("no one")) {
+			
+		} else {
+			button1.removeActionListener(new somethingWeird());
+			button2.removeActionListener(new somethingWeird());
+			button3.removeActionListener(new somethingWeird());
+			button4.removeActionListener(new somethingWeird());
+			button5.removeActionListener(new somethingWeird());
+			button6.removeActionListener(new somethingWeird());
+			button7.removeActionListener(new somethingWeird());
+			button8.removeActionListener(new somethingWeird());
+			button9.removeActionListener(new somethingWeird());
+			button10.removeActionListener(new somethingWeird());
+			button11.removeActionListener(new somethingWeird());
+			button12.removeActionListener(new somethingWeird());
+			button13.removeActionListener(new somethingWeird());
+			button14.removeActionListener(new somethingWeird());
+			button15.removeActionListener(new somethingWeird());
+			button16.removeActionListener(new somethingWeird());
+			
+			whosturn.setText(whoWon() + " won!!!!!!!!!!!!!!!");
+			if (whoWon().equals("Player 1")) {
+				nextButton.setVisible(true);
+				gameEnded = true;
+			} else if (whoWon().equals("Player 2")) {
+				nextButton.setVisible(false);
+				whosturn.setText(whoWon() + " won!!!!" + "SORRY, YOU LOST THE GAME");
+				gameEnded = true;
+			}
+		}
+		if (isPlayer1) {
+			isPlayer1 = false;
+			if (!(gameEnded)) {
+				whosturn.setText("Player 2, please choose");
+				whosturn.setForeground(Color.BLUE);
+			}
+			button.setText("X");
+			button.setOpaque(true);
+			button.setBackground(Color.RED);
+			button.setForeground(Color.WHITE);
+			button.setBorderPainted(false);
+			button.removeActionListener(new TicTacToeGame());
+		} else {
+			isPlayer1 = true;
+			if (!(gameEnded)) {
+				whosturn.setText("Player 1, please choose");
+				whosturn.setForeground(Color.RED);
+			}
+			button.setText("O");
+			button.setOpaque(true);
+			button.setBackground(Color.BLUE);
+			button.setForeground(Color.WHITE);
+			button.setBorderPainted(false);
+			button.removeActionListener(new TicTacToeGame());
+		}
+	}
+	public static boolean isFilled() {
+		return isClickedbutton1
+				&& isClickedbutton2
+				&& isClickedbutton3
+				&& isClickedbutton4
+				&& isClickedbutton5
+				&& isClickedbutton6
+				&& isClickedbutton7
+				&& isClickedbutton8
+				&& isClickedbutton9
+				&& isClickedbutton10
+				&& isClickedbutton11
+				&& isClickedbutton12
+				&& isClickedbutton13
+				&& isClickedbutton14
+				&& isClickedbutton15
+				&& isClickedbutton16;
+	}
+
+	public static String whoWon() {
+		for (int num = 1; num <= 2; num++) {
+			if (XObutton1 == num && XObutton2 == num && XObutton3 == num && XObutton4 == num) {
+				return "Player " + num;
+			} else if (XObutton1 == num && XObutton5 == num && XObutton9 == num && XObutton13 == num) {
+				return "Player " + num;
+			} else if (XObutton1 == num && XObutton6 == num && XObutton11 == num && XObutton16 == num) {
+				return "Player " + num;
+			} else if (XObutton2 == num && XObutton6 == num && XObutton10 == num && XObutton14 == num) {
+				return "Player " + num;
+			} else if (XObutton3 == num && XObutton7 == num && XObutton11 == num && XObutton15 == num) {
+				return "Player " + num;
+			} else if (XObutton4 == num && XObutton8 == num && XObutton12 == num && XObutton16 == num) {
+				return "Player " + num;
+			} else if (XObutton4 == num && XObutton7 == num && XObutton10 == num && XObutton13 == num) {
+				return "Player " + num;
+			} else if (XObutton5 == num && XObutton6 == num && XObutton7 == num && XObutton8 == num) {
+				return "Player " + num;
+			} else if (XObutton9 == num && XObutton10 == num && XObutton11 == num && XObutton12 == num) {
+				return "Player " + num;
+			} else if (XObutton13 == num && XObutton14 == num && XObutton15 == num && XObutton16 == num) {
+				return "Player " + num;
+			}
+		}
+		return "no one";
+	}
+
+
+
+
+
+
+
+
+
+
+
+	// titlePage
 	public static JLabel L1;
 	public static JFrame window;
 	public static Container con;
@@ -51,12 +353,9 @@ public class somethingWeird implements ActionListener, KeyListener {
 	public static JButton startButton, goButton;
 	public static JTextArea startScreenText;
 	public static JTextField jt = new JTextField();
-//	StartScreenHandler a = new StartScreenHandler(); 
-	
-
 	public static void titlePage() {
-		
-		window = new JFrame();
+
+		window = new JFrame("Welcome to Jumanjee 5");
 		window.setTitle("Jumanjee 5");
 		window.setSize(1400, 800);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -67,41 +366,41 @@ public class somethingWeird implements ActionListener, KeyListener {
 		window.setLayout(null);
 		window.setVisible(true);
 		con = window.getContentPane();
-		
+
 		titleNamePanel = new JPanel();
 		titleNamePanel.setBounds(385, 100, 575, 150);
 		titleNamePanel.setBackground(Color.YELLOW);
 		titleNameLabel = new JLabel("Jumanjee 5");
 		titleNameLabel.setForeground(Color.RED);
 		titleNameLabel.setFont(titleButtonFont);
-		
+
 		startButtonPanel = new JPanel();
 		startButtonPanel.setBounds(575, 500 , 215, 55);
 		startButtonPanel.setBackground(Color.YELLOW);
-		
+
 		startButton = new JButton("Start");
 		startButton.setBackground(Color.YELLOW);
 		startButton.setForeground(Color.RED);
 		startButton.setFont(startButtonFont);
 		startButton.addActionListener(new somethingWeird());
-		
+
 		titleNamePanel.add(titleNameLabel);
 		con.add(titleNamePanel);
 		startButtonPanel.add(startButton);
 		con.add(startButtonPanel);
 		window.setVisible(true);
 	}
-	
+
 	public void startScreen( ) {
-		
+
 		titleNamePanel.setVisible(false);
 		startButtonPanel.setVisible(false); 
-		
+
 		startScreenPanel = new JPanel();
 		startScreenPanel.setBounds(100, 100, 800, 250);
 		startScreenPanel.setBackground(Color.yellow );
 		con.add(startScreenPanel);
-		
+
 		startScreenText = new JTextArea("\"Hello There\" Welcome to Jumanjee 5 where this time it is underwater\n"
 				+ "You were going to a trip and then now you are stuck in an ocean because your submarine has sunk.\n"
 				+ "In order to escape the ocean you need to complete a series of tasks given.\n"
@@ -115,12 +414,12 @@ public class somethingWeird implements ActionListener, KeyListener {
 		startScreenText.setLineWrap(true);
 		startScreenPanel.add(startScreenText);
 		startScreenText.setEditable(false);
-		
+
 		goButtonPanel = new JPanel();
 		goButtonPanel.setBounds(685, 400, 215, 55);
 		goButtonPanel.setBackground(Color.YELLOW);
 		con.add(goButtonPanel);
-		
+
 		goButton = new JButton("Let's Go");
 		goButton.setBackground(Color.YELLOW);
 		goButton.setForeground(Color.RED);
@@ -128,24 +427,17 @@ public class somethingWeird implements ActionListener, KeyListener {
 		goButton.addActionListener(new somethingWeird());
 		goButtonPanel.add(goButton);
 	}
-	
-//	public class StartScreenHandler implements ActionListener {
-//		public void actionPerformed(ActionEvent event) {
-//			startScreen();
-//			
-//		}
-//	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
+
+
+
+
+
+
+
+
+
+	// riddleGame
 	//timer 
 	private static int secRiddle =01;
 	private static int minRiddle = 02;
@@ -238,7 +530,7 @@ public class somethingWeird implements ActionListener, KeyListener {
 		answers[5] = "age";
 		answers[6] = "barber";
 
-		frameRiddle = new JFrame();
+		frameRiddle = new JFrame("Riddle Game");
 		panelRiddle = new JPanel();
 		successRiddle = new JLabel("");
 		successRiddle.setBounds(125, 30, 500, 200);
@@ -301,8 +593,33 @@ public class somethingWeird implements ActionListener, KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if(e.getKeyCode()==KeyEvent.VK_ENTER) {
-			checksubmit();
+		if (currLevel == 2) { // for riddleGame
+			if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+				checksubmit();
+			}
+		} else if (currLevel == 1) { // for memoryGame
+			if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+				String user = userText.getText();
+
+				for (String repeatedWord : repeat) {
+					if (user.equals(repeatedWord)) {
+						getIt.setText("You literally typed the word before. Failed");
+						return;
+					}
+				}
+				for (String word : words) {
+					if (user.equals(word)) {
+						count++;
+						successMemory.setText("Number of correct things: " + count);
+						words.remove(word);
+						getIt.setText("Successful!");
+						repeat.add(user);
+						return;
+					}
+				}
+				repeat.add(user);
+				getIt.setText("Failed!");
+			}
 		}
 
 	}
@@ -351,10 +668,6 @@ public class somethingWeird implements ActionListener, KeyListener {
 
 
 
-	
-	
-	
-	
 
 
 
@@ -362,6 +675,10 @@ public class somethingWeird implements ActionListener, KeyListener {
 
 
 
+
+
+
+	// memoryGame
 	private static int secMemory = 01;
 	private static int minMemory = 02;
 	private static JLabel timeMemory;
@@ -441,7 +758,7 @@ public class somethingWeird implements ActionListener, KeyListener {
 		words = new ArrayList<String>();
 
 		panelMemory = new JPanel();
-		JFrame frameMemory = new JFrame();
+		JFrame frameMemory = new JFrame("Memory Game");
 		frameMemory.setSize(1400, 800);
 		frameMemory.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frameMemory.add(panelMemory);
@@ -500,49 +817,50 @@ public class somethingWeird implements ActionListener, KeyListener {
 		typeLabel = new JLabel("Type");
 		typeLabel.setBounds(10, 345, 60, 25);
 		panelMemory.add(typeLabel);
-		typeLabel.show(false);
+		typeLabel.setVisible(false);
 
 		userText = new JTextField(20);
 		userText.setBounds(80, 345, 165, 35);
+		userText.addKeyListener(new somethingWeird());
 		panelMemory.add(userText);
-		userText.show(false);
+		userText.setVisible(false);
 
 		checkButton = new JButton("Check if I memorized correctly");
 		checkButton.setBounds(245, 345, 250, 35);
 		checkButton.addActionListener(new somethingWeird());
 		panelMemory.add(checkButton);
-		checkButton.show(false);
+		checkButton.setVisible(false);
 
 		done = new JButton("Done spitting out what I have in my brain");
 		done.setBounds(495, 345, 300, 35);
 		done.addActionListener(new somethingWeird());
 		panelMemory.add(done);
-		done.show(false);
+		done.setVisible(false);
 
 		successMemory = new JLabel("Number of correct things : 0");
 		successMemory.setBounds(10, 380, 300, 25);
 		panelMemory.add(successMemory);
-		successMemory.show(false);
+		successMemory.setVisible(false);
 
 		getIt = new JLabel("");
 		getIt.setBounds(10, 405, 300, 25);
 		panelMemory.add(getIt);
-		getIt.show(false);
+		getIt.setVisible(false);
 
 		finalSay1 = new JLabel("");
 		finalSay1.setBounds(10, 405, 600, 25);
 		panelMemory.add(finalSay1);
-		finalSay1.show(false);
+		finalSay1.setVisible(false);
 
 		finalSay2 = new JLabel("");
 		finalSay2.setBounds(10, 430, 600, 25);
 		panelMemory.add(finalSay2);
-		finalSay2.show(false);
+		finalSay2.setVisible(false);
 
 		finalSay3 = new JLabel("");
 		finalSay3.setBounds(10, 455, 600, 25);
 		panelMemory.add(finalSay3);
-		finalSay3.show(false);
+		finalSay3.setVisible(false);
 
 		timeMemory = new JLabel("hey");
 		timeMemory.setBounds(25, 410, 600, 175);
@@ -563,6 +881,7 @@ public class somethingWeird implements ActionListener, KeyListener {
 
 	public void actionPerformed(ActionEvent e) {
 
+		// memoryGame
 		if (e.getSource() == startTheGameButton) {
 			int[] indexes = new int[15];
 			indexes[0] = (int)(Math.random() * 10000) + 1;
@@ -608,38 +927,45 @@ public class somethingWeird implements ActionListener, KeyListener {
 			getIt.setText("Failed!");
 		} else if (e.getSource() == doneMemorizing) {
 			listOfWords.setVisible(false);
-			doneMemorizing.show(false);
+			doneMemorizing.setVisible(false);
 
-			startTheGameButton.show(false);
-			typeLabel.show(true);
-			userText.show(true);
-			checkButton.show(true);
-			successMemory.show(true);
-			getIt.show(true);
-			done.show(true);
+			startTheGameButton.setVisible(false);
+			typeLabel.setVisible(true);
+			userText.setVisible(true);
+			checkButton.setVisible(true);
+			successMemory.setVisible(true);
+			getIt.setVisible(true);
+			done.setVisible(true);
 		} else if (e.getSource() == done) {
 			taskMemory.cancel();
 
-			checkButton.show(false);
-			done.show(false);
-			successMemory.show(false);
-			getIt.show(false);
-			typeLabel.show(false);
-			userText.show(false);
+			checkButton.setVisible(false);
+			done.setVisible(false);
+			successMemory.setVisible(false);
+			getIt.setVisible(false);
+			typeLabel.setVisible(false);
+			userText.setVisible(false);
 
 			finalSay1.setText("So, you got " + count + " correct, which means . . .");
-			finalSay1.show(true);
+			finalSay1.setVisible(true);
 
 			if (count >= 8) {
 				finalSay2.setText("YOU EARNED THE SHELL AFTER ALL!");
 				finalSay3.setText("Here's your shell. You will be able to breathe underwater forever.");
+				finalSay2.setVisible(true);
+				finalSay3.setVisible(true);
+				nextButton.setVisible(true);
 			} else {
 				finalSay2.setText("you are not worthy of the shell!");
-				finalSay3.setText("You need to go back to the first game to try again. Bye");
+				finalSay3.setText("Bye. Adios");
+				finalSay2.setVisible(true);
+				finalSay3.setVisible(true);
+				nextButton.setVisible(false);
 			}
-			finalSay2.show(true);
-			finalSay3.show(true);
-			nextButton.setVisible(true);
+
+			
+		
+		// nextButton
 		} else if (e.getSource() == nextButton) {
 			currLevel++;
 			if (currLevel == 1) {
@@ -655,12 +981,16 @@ public class somethingWeird implements ActionListener, KeyListener {
 			} else if (currLevel == 2) {
 				riddleGame();
 			} else if (currLevel == 3) {
-				
+				ticTacToeGame();
 			} else if (currLevel == 4) {
-				
+
 			} else if (currLevel == 5) {
-				
+
 			}
+
+			
+			
+		// titlePage
 		} else if (e.getSource() == submitbutton) {
 			checksubmit();
 		} else if (e.getSource() == goButton) {
@@ -675,6 +1005,211 @@ public class somethingWeird implements ActionListener, KeyListener {
 			startScreen();
 		}
 
+
+
+		// TicTacToe
+		if (currLevel == 3) {
+			whosturn.setBounds(10, 625, 500, 25);
+			instru1.setVisible(false);
+			instru2.setVisible(false);
+			if (isFilled()) {
+				whosturn.setText(whoWon() + " won!!!!!!!!!!!!!!!");
+				if (whoWon().equals("Player 1")) {
+					nextButton.setVisible(true);
+					gameEnded = true;
+				} else if (whoWon().equals("Player 2")) {
+					nextButton.setVisible(false);
+					whosturn.setText(whoWon() + " won!!!!" + "SORRY, YOU LOST THE GAME");
+					gameEnded = true;
+				}
+			}
+			if (!(isFilled()) && !(gameEnded)) {
+				if (e.getSource() == button1) {
+					if (isClickedbutton1 == false) {
+						if (isPlayer1 == true) {
+							XObutton1 = 1;
+						} else {
+							XObutton1 = 2;
+						}
+						change(button1);
+					}
+					isClickedbutton1 = true;
+				} else if (e.getSource() == button2) {
+					if (isClickedbutton2 == false) {
+						if (isPlayer1 == true) {
+							XObutton2 = 1;
+						} else {
+							XObutton2 = 2;
+						}
+						change(button2);
+					}
+					isClickedbutton2 = true;
+				} else if (e.getSource() == button3) {
+					if (isClickedbutton3 == false) {
+						if (isPlayer1 == true) {
+							XObutton3 = 1;
+						} else {
+							XObutton3 = 2;
+						}
+						change(button3);
+					}
+					isClickedbutton3 = true;
+				} else if (e.getSource() == button4) {
+					if (isClickedbutton4 == false) {
+						if (isPlayer1 == true) {
+							XObutton4 = 1;
+						} else {
+							XObutton4 = 2;
+						}
+						change(button4);
+					}
+					isClickedbutton4 = true;
+				} else if (e.getSource() == button5) {
+					if (isClickedbutton5 == false) {
+						if (isPlayer1 == true) {
+							XObutton5 = 1;
+						} else {
+							XObutton5 = 2;
+						}
+						change(button5);
+					}
+					isClickedbutton5 = true;
+				} else if (e.getSource() == button6) {
+					if (isClickedbutton6 == false) {
+						if (isPlayer1 == true) {
+							XObutton6 = 1;
+						} else {
+							XObutton6 = 2;
+						}
+						change(button6);
+					}
+					isClickedbutton6 = true;
+				} else if (e.getSource() == button7) {
+					if (isClickedbutton7 == false) {
+						if (isPlayer1 == true) {
+							XObutton7 = 1;
+						} else {
+							XObutton7 = 2;
+						}
+						change(button7);
+					}
+					isClickedbutton7 = true;
+				} else if (e.getSource() == button8) {
+					if (isClickedbutton8 == false) {
+						if (isPlayer1 == true) {
+							XObutton8 = 1;
+						} else {
+							XObutton8 = 2;
+						}
+						change(button8);
+					}
+					isClickedbutton8 = true;
+				} else if (e.getSource() == button9) {
+					if (isClickedbutton9 == false) {
+						if (isPlayer1 == true) {
+							XObutton9 = 1;
+						} else {
+							XObutton9 = 2;
+						}
+						change(button9);
+					}
+					isClickedbutton9 = true;
+				} else if (e.getSource() == button10) {
+					if (isClickedbutton10 == false) {
+						if (isPlayer1 == true) {
+							XObutton10 = 1;
+						} else {
+							XObutton10 = 2;
+						}
+						change(button10);
+					}
+					isClickedbutton10 = true;
+				} else if (e.getSource() == button11) {
+					if (isClickedbutton11 == false) {
+						if (isPlayer1 == true) {
+							XObutton11 = 1;
+						} else {
+							XObutton11 = 2;
+						}
+						change(button11);
+					}
+					isClickedbutton11 = true;
+				} else if (e.getSource() == button12) {
+					if (isClickedbutton12 == false) {
+						if (isPlayer1 == true) {
+							XObutton12 = 1;
+						} else {
+							XObutton12 = 2;
+						}
+						change(button12);
+					}
+					isClickedbutton12 = true;
+				} else if (e.getSource() == button13) {
+					if (isClickedbutton13 == false) {
+						if (isPlayer1 == true) {
+							XObutton13 = 1;
+						} else {
+							XObutton13 = 2;
+						}
+						change(button13);
+					}
+					isClickedbutton13 = true;
+				} else if (e.getSource() == button14) {
+					if (isClickedbutton14 == false) {
+						if (isPlayer1 == true) {
+							XObutton14 = 1;
+						} else {
+							XObutton14 = 2;
+						}
+						change(button14);
+					}
+					isClickedbutton14 = true;
+				} else if (e.getSource() == button15) {
+					if (isClickedbutton15 == false) {
+						if (isPlayer1 == true) {
+							XObutton15 = 1;
+						} else {
+							XObutton15 = 2;
+						}
+						change(button15);
+					}
+					isClickedbutton15 = true;
+				} else if (e.getSource() == button16) {
+					if (isClickedbutton16 == false) {
+						if (isPlayer1 == true) {
+							XObutton16 = 1;
+						} else {
+							XObutton16 = 2;
+						}
+						change(button16);
+					}
+					isClickedbutton16 = true;
+				}
+				if (isFilled()) {
+					whosturn.setText(whoWon() + " won!!!!!!!!!!!!!!!");
+					if (whoWon().equals("Player 1")) {
+						nextButton.setVisible(true);
+						gameEnded = true;
+					} else if (whoWon().equals("Player 2")) {
+						nextButton.setVisible(false);
+						whosturn.setText(whoWon() + " won!!!!" + "SORRY, YOU LOST THE GAME");
+						gameEnded = true;
+					}
+				}
+			} else {
+				whosturn.setText(whoWon() + " won!!!!!!!!!!!!!!!");
+				if (whoWon().equals("Player 1")) {
+					nextButton.setVisible(true);
+					gameEnded = true;
+				} else if (whoWon().equals("Player 2")) {
+					nextButton.setVisible(false);
+					whosturn.setText(whoWon() + " won!!!!" + "SORRY, YOU LOST THE GAME");
+					gameEnded = true;
+				}
+			}
+		}
+
 	}
+
 
 }

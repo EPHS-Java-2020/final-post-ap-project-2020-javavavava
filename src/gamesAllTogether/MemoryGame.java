@@ -3,6 +3,8 @@ package gamesAllTogether;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 
@@ -12,7 +14,7 @@ import java.util.*;
 import java.util.Timer;
 import java.util.concurrent.TimeUnit;
 
-public class MemoryGame implements ActionListener {
+public class MemoryGame implements ActionListener, KeyListener {
 
 	// timer
 	// timer
@@ -216,6 +218,7 @@ public class MemoryGame implements ActionListener {
 
 		userText = new JTextField(20);
 		userText.setBounds(80, 345, 165, 35);
+		userText.addKeyListener(new MemoryGame());
 		panel.add(userText);
 		userText.show(false);
 
@@ -264,7 +267,45 @@ public class MemoryGame implements ActionListener {
 		frame.setVisible(true);
 
 	}
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
 
+	}
+
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+			String user = userText.getText();
+
+			for (String repeatedWord : repeat) {
+				if (user.equals(repeatedWord)) {
+					getIt.setText("You literally typed the word before. Failed");
+					return;
+				}
+			}
+			for (String word : words) {
+				if (user.equals(word)) {
+					count++;
+					success.setText("Number of correct things: " + count);
+					words.remove(word);
+					getIt.setText("Successful!");
+					repeat.add(user);
+					return;
+				}
+			}
+			repeat.add(user);
+			getIt.setText("Failed!");
+		}
+
+	}
+	@Override
+	public void keyReleased(KeyEvent e) {
+
+
+	}
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 
