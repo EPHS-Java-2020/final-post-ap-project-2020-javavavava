@@ -1,5 +1,5 @@
 //BAHAHAHA IM FUCKING DONE THIS TOOK ME ME FUCKING 12 sHOURS REEEEE
-package org.edenpr.ephs.scramble;
+package scrambleHIII;
 
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
@@ -83,7 +83,7 @@ public class Scramble implements ActionListener {
 	// Create questions and answers list(scrambled/ unscrambled)
 	public static void startScramble() throws InterruptedException, FileNotFoundException {
 
-		Scanner input = new Scanner(new File("/Users/64000557/git/AarushiMaze/APGame/resources/wordsList.txt"));
+		Scanner input = new Scanner(new File("wordsList.txt"));
 		allWords = new ArrayList<String>();
 		scrambledWords = new ArrayList<String>();
 		unscrambledWords = new ArrayList<String>();
