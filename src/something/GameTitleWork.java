@@ -101,8 +101,8 @@ public class GameTitleWork {
 		startButtonPanel.setVisible(false); 
 		
 		startScreenPanel = new JPanel();
-		startScreenPanel.setBounds(100, 100, 800, 600);
-		startScreenPanel.setBackground(new Color(0, 105, 148) );
+		startScreenPanel.setBounds(100, 100, 800, 400);
+		startScreenPanel.setBackground(new Color(0, 105, 148));
 		con.add(startScreenPanel);
 		
 		startScreenText = new JTextArea("\"Hello There\" Welcome to Jumanjee 5 where this time it is underwater\n"
@@ -129,6 +129,8 @@ public class GameTitleWork {
 		goButton.setForeground(Color.RED);
 		goButton.setFont(startButtonFont);
 		goButtonPanel.add(goButton);
+		
+		con.remove(imagePanel);
 		
 	}
 	
