@@ -26,6 +26,7 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.*;
 
 import javax.swing.ImageIcon;
 //import javax.swing.ImageIcon;
@@ -145,7 +146,7 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 	}
 
 	// Board is what actually plays and displays the game
-	private class Board extends JPanel implements MouseListener {
+	private static class Board extends JPanel implements MouseListener {
 		private Random random=new Random();
 		private int rows[][]={{0,2},{3,5},{6,8},{0,6},{1,7},{2,8},{0,8},{2,6}};
 		// Endpoints of the 8 rows in position[] (across, down, diagonally)
