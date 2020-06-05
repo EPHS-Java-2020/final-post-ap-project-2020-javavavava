@@ -395,7 +395,7 @@ public class MainClass implements ActionListener, KeyListener {
 		
 		imageLabel = new JLabel();
 		
-		image = new ImageIcon(".//res//Game.jpg");
+		image = new ImageIcon("Game.jpg");
 		
 		imageLabel.setIcon(image);
 		imagePanel.add(imageLabel);
@@ -1004,9 +1004,12 @@ public class MainClass implements ActionListener, KeyListener {
 
 			
 			
-		// titlePage
+		// riddleGame
 		} else if (e.getSource() == submitbutton) {
 			checksubmit();
+			
+			
+		// titlePage
 		} else if (e.getSource() == goButton) {
 			currLevel++;
 			try {

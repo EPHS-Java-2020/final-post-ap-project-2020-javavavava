@@ -41,7 +41,8 @@ public class GameTitleWork {
 		window.setSize(1400, 800);
 		window.getContentPane().setBackground(new Color(0, 105, 148));
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		window.setBackground(new Color(0, 105, 148));
+		window.setContentPane(new JLabel(new ImageIcon("Game.jpg")));
+//		window.setBackground(new Color(0, 105, 148));
 		window.setLayout(new FlowLayout());
 		L1 = new JLabel();
 		window.add(L1);
@@ -78,7 +79,7 @@ public class GameTitleWork {
 		
 		imageLabel = new JLabel();
 		
-		image = new ImageIcon(".//res//Game.jpg");
+		image = new ImageIcon("Game.jpg");
 		
 		imageLabel.setIcon(image);
 		imagePanel.add(imageLabel);
