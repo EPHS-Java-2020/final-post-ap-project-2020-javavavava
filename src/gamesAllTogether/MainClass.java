@@ -1,4 +1,4 @@
-//priyanka updated code
+////priyanka updated code
 //package gamesAllTogether;
 //
 //import java.awt.Color;
@@ -1339,7 +1339,7 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 	public static void chooseTTT() {
 		panelChoose = new JPanel();
 		frameChoose = new JFrame();
-		frameChoose.setSize(300, 1000);
+		frameChoose.setSize(400, 600);
 		frameChoose.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frameChoose.add(panelChoose);
 
@@ -1362,7 +1362,7 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 		frameChoose.setVisible(true);
 	}
 
-	// threeByThreeTicTacToeGame
+	// threeByThreeTTTicTacToeGame
 	public static JFrame frame33;
 	public static JPanel panel33;
 	
@@ -1384,13 +1384,53 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 	//		}
 
 	// Initialize
-	public static void threeByThreeTicTacToeGame() {
+	
+	//timer
+	private static int sec =01;
+	private static int min = 02;
+	private static JLabel time;
+	private static Timer timer = new Timer();
+	private static TimerTask task = new TimerTask() {
+		public void run() {
+			
+			sec--;
+			if(min>=1&&sec==0) {
+				min--;
+				sec = 59;
+			}
+			if(sec<10) {//check this part 
+			time.setText("Timer: 0"+min+":0"+sec);
+			}else {
+				time.setText("Timer: 0"+min+":"+sec);
+			}
+			if(min==0&&sec==0) {
+			
+					whosturn.setText("SORRY, TIMER UP YOU ARE NOT WORTHY THE SHELL.");
+					timer.cancel();
+				
+			}
+			
+		}
+		};
+//
+//	public static void ticTacToeGame() {
+//		panelTTT = new JPanel();
+//		
+	
+	
+	public static void threeByThreeTTT() {
 		frame33 = new JFrame("3 by 3 TicTacToe Game");
 		
 		
 //		super("Tic Tac Toe demo");
 		
 		JPanel topPanel=new JPanel();
+		//timer 
+		time = new JLabel("hey");
+		time.setBounds(10, 550, 100, 175); 
+		topPanel.add(time);
+		timer.schedule(task, 1000, 1000);
+		
 		topPanel.setLayout(new FlowLayout());
 		topPanel.add(new JLabel("Line Thickness:"));
 		topPanel.add(slider=new JSlider(SwingConstants.HORIZONTAL, 1, 20, 4));
@@ -1405,7 +1445,7 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 		Board board = new Board();
 		frame33.add(board, BorderLayout.CENTER);
 		frame33.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame33.setSize(500, 500);
+		frame33.setSize(500, 600);
 		frame33.setVisible(true);
 	}
 
@@ -1664,34 +1704,6 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 
 	public static JPanel panelTTT;
 
-	// timer
-	private static int secTTT =01;
-	private static int minTTT = 02;
-	private static JLabel timeTTT;
-	private static Timer timerTTT = new Timer();
-	private static TimerTask taskTTT = new TimerTask() {
-		public void run() {
-			
-			secTTT--;
-			if(minTTT>=1&&secTTT==0) {
-				minTTT--;
-				secTTT = 59;
-			}
-			if(secTTT<10) {//check this part 
-			timeTTT.setText("Timer: 0"+minTTT+":0"+secTTT);
-			}else {
-				timeTTT.setText("Timer: 0"+minTTT+":"+secTTT);
-			}
-			if(minTTT==0&&secTTT==0) {
-			
-					whosturn.setText("SORRY, TIMER UP YOU ARE NOT WORTHY THE SHELL.");
-					timerTTT.cancel();
-				
-			}
-			
-		}
-		};
-	
 	public static void fourByFourTicTacToeGame() {
 		panelTTT = new JPanel();
 		JFrame frameTTT = new JFrame("TicTacToe Game");
@@ -1815,7 +1827,6 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 				whosturn.setText(whoWon() + " won!!!!" + "SORRY, YOU LOST THE GAME");
 				gameEnded = true;
 			}
-			timerTTT.cancel();
 		} else if (whoWon().equals("no one")) {
 
 		} else {
@@ -1840,12 +1851,10 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 			if (whoWon().equals("Player 1")) {
 				nextButton.setVisible(true);
 				gameEnded = true;
-				timerTTT.cancel();
 			} else if (whoWon().equals("Player 2")) {
 				nextButton.setVisible(false);
 				whosturn.setText(whoWon() + " won!!!!" + "SORRY, YOU LOST THE GAME");
 				gameEnded = true;
-				timerTTT.cancel();
 			}
 		}
 		if (isPlayer1) {
@@ -2530,7 +2539,6 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 			}
 			repeat.add(user);
 			getIt.setText("Failed!");
-			userText.setText("");
 		} else if (e.getSource() == doneMemorizing) {
 			listOfWords.setVisible(false);
 			doneMemorizing.setVisible(false);
@@ -2586,15 +2594,13 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 				}
 			} else if (currLevel == 2) {
 				riddleGame();
-			} else if (currLevel == 3) {
-				chooseTTT();
-			} else if (currLevel == 4){
-				threeByThreeTicTacToeGame();
-			} else if (currLevel == 5) {
-				fourByFourTicTacToeGame();
-			} else if (currLevel == 6) {
+			} else if (currLevel == 3){
 
-			} else if (currLevel == 7) {
+			} else if (currLevel == 4) {
+				fourByFourTicTacToeGame();
+			} else if (currLevel == 5) {
+
+			} else if (currLevel == 6) {
 
 			}
 
@@ -2605,8 +2611,6 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 			checksubmit();
 
 
-			
-			
 			// titlePage
 		} else if (e.getSource() == goButton) {
 			currLevel++;
@@ -2619,26 +2623,22 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 		} else if (e.getSource() == startButton) {
 			startScreen();
 
-			
-			
 			// intro to TicTacToe
 		} else if (e.getSource() == fourByFourTTT) {
-			currLevel = 5;
-			fourByFourTTT.removeActionListener(new MainClass());
-			threeByThreeTTT.removeActionListener(new MainClass());
-			fourByFourTicTacToeGame();
-		} else if (e.getSource() == threeByThreeTTT) {
 			currLevel = 4;
 			fourByFourTTT.removeActionListener(new MainClass());
 			threeByThreeTTT.removeActionListener(new MainClass());
-			threeByThreeTicTacToeGame();
+		} else if (e.getSource() == threeByThreeTTT) {
+			currLevel = 3;
+			fourByFourTTT.removeActionListener(new MainClass());
+			threeByThreeTTT.removeActionListener(new MainClass());
 		}
 
 
 
 
 		// fourByFourTicTacToeGame
-		if (currLevel == 5) {
+		if (currLevel == 4) {
 			whosturn.setBounds(10, 625, 500, 25);
 			instru1.setVisible(false);
 			instru2.setVisible(false);
@@ -2838,9 +2838,7 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 				}
 			}
 		}
-		
-		// threeByThreeTicTacToeGame
-		if (currLevel == 4) {
+		if (currLevel == 3) {
 			if (e.getSource()==oButton) {
 				Color newColor = JColorChooser.showDialog(new MainClass(), "Choose a new color for O", oColor);
 				if (newColor!=null)
