@@ -116,6 +116,7 @@ public class GameTitleWork {
 		startScreenText.setFont(startScreenFont);
 		startScreenText.setLineWrap(true);
 		startScreenPanel.add(startScreenText);
+		startScreenText.setVisible(true);
 		startScreenText.setEditable(false);
 		
 		goButtonPanel = new JPanel();
