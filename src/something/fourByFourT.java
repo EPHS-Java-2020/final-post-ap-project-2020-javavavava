@@ -17,7 +17,7 @@ import gamesAllTogether.MainClass;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class TicTacToeGame implements ActionListener {
+public class fourByFourT implements ActionListener {
 	public static JButton nextButton;
 	
 	public static boolean isPlayer1 = true;
@@ -108,22 +108,22 @@ public class TicTacToeGame implements ActionListener {
 			if(minTTT==0&&secTTT==0) {
 				timerTTT.cancel();
 				timeTTT.setText("Timer done");
-				button1.removeActionListener(new TicTacToeGame());
-				button2.removeActionListener(new TicTacToeGame());
-				button3.removeActionListener(new TicTacToeGame());
-				button4.removeActionListener(new TicTacToeGame());
-				button5.removeActionListener(new TicTacToeGame());
-				button6.removeActionListener(new TicTacToeGame());
-				button7.removeActionListener(new TicTacToeGame());
-				button8.removeActionListener(new TicTacToeGame());
-				button9.removeActionListener(new TicTacToeGame());
-				button10.removeActionListener(new TicTacToeGame());
-				button11.removeActionListener(new TicTacToeGame());
-				button12.removeActionListener(new TicTacToeGame());
-				button13.removeActionListener(new TicTacToeGame());
-				button14.removeActionListener(new TicTacToeGame());
-				button15.removeActionListener(new TicTacToeGame());
-				button16.removeActionListener(new TicTacToeGame());
+				button1.removeActionListener(new fourByFourT());
+				button2.removeActionListener(new fourByFourT());
+				button3.removeActionListener(new fourByFourT());
+				button4.removeActionListener(new fourByFourT());
+				button5.removeActionListener(new fourByFourT());
+				button6.removeActionListener(new fourByFourT());
+				button7.removeActionListener(new fourByFourT());
+				button8.removeActionListener(new fourByFourT());
+				button9.removeActionListener(new fourByFourT());
+				button10.removeActionListener(new fourByFourT());
+				button11.removeActionListener(new fourByFourT());
+				button12.removeActionListener(new fourByFourT());
+				button13.removeActionListener(new fourByFourT());
+				button14.removeActionListener(new fourByFourT());
+				button15.removeActionListener(new fourByFourT());
+				button16.removeActionListener(new fourByFourT());
 				
 				nextButton.setVisible(false);
 				whosturn.setText("SORRY, YOU LOST THE GAME");
@@ -148,82 +148,82 @@ public class TicTacToeGame implements ActionListener {
 		
 		button1 = new JButton("");
 		button1.setBounds(10, 10, 150, 150);
-		button1.addActionListener(new TicTacToeGame());
+		button1.addActionListener(new fourByFourT());
 		panelTTT.add(button1);
 		
 		button2 = new JButton("");
 		button2.setBounds(161, 10, 150, 150);
-		button2.addActionListener(new TicTacToeGame());
+		button2.addActionListener(new fourByFourT());
 		panelTTT.add(button2);
 		
 		button3 = new JButton("");
 		button3.setBounds(312, 10, 150, 150);
-		button3.addActionListener(new TicTacToeGame());
+		button3.addActionListener(new fourByFourT());
 		panelTTT.add(button3);
 		
 		button4 = new JButton("");
 		button4.setBounds(463, 10, 150, 150);
-		button4.addActionListener(new TicTacToeGame());
+		button4.addActionListener(new fourByFourT());
 		panelTTT.add(button4);
 		
 		button5 = new JButton("");
 		button5.setBounds(10, 161, 150, 150);
-		button5.addActionListener(new TicTacToeGame());
+		button5.addActionListener(new fourByFourT());
 		panelTTT.add(button5);
 		
 		button6 = new JButton("");
 		button6.setBounds(161, 161, 150, 150);
-		button6.addActionListener(new TicTacToeGame());
+		button6.addActionListener(new fourByFourT());
 		panelTTT.add(button6);
 		
 		button7 = new JButton("");
 		button7.setBounds(312, 161, 150, 150);
-		button7.addActionListener(new TicTacToeGame());
+		button7.addActionListener(new fourByFourT());
 		panelTTT.add(button7);
 		
 		button8 = new JButton("");
 		button8.setBounds(463, 161, 150, 150);
-		button8.addActionListener(new TicTacToeGame());
+		button8.addActionListener(new fourByFourT());
 		panelTTT.add(button8);
 		
 		button9 = new JButton("");
 		button9.setBounds(10, 312, 150, 150);
-		button9.addActionListener(new TicTacToeGame());
+		button9.addActionListener(new fourByFourT());
 		panelTTT.add(button9);
 		
 		button10 = new JButton("");
 		button10.setBounds(161, 312, 150, 150);
-		button10.addActionListener(new TicTacToeGame());
+		button10.addActionListener(new fourByFourT());
 		panelTTT.add(button10);
 		
 		button11 = new JButton("");
 		button11.setBounds(312, 312, 150, 150);
-		button11.addActionListener(new TicTacToeGame());
+		button11.addActionListener(new fourByFourT());
 		panelTTT.add(button11);
 		
 		button12 = new JButton("");
 		button12.setBounds(463, 312, 150, 150);
-		button12.addActionListener(new TicTacToeGame());
+		button12.addActionListener(new fourByFourT());
 		panelTTT.add(button12);
 		
 		button13 = new JButton("");
 		button13.setBounds(10, 463, 150, 150);
-		button13.addActionListener(new TicTacToeGame());
+		button13.addActionListener(new fourByFourT());
 		panelTTT.add(button13);
 		
 		button14 = new JButton("");
 		button14.setBounds(161, 463, 150, 150);
-		button14.addActionListener(new TicTacToeGame());
+		button14.addActionListener(new fourByFourT());
 		panelTTT.add(button14);
 		
 		button15 = new JButton("");
 		button15.setBounds(312, 463, 150, 150);
-		button15.addActionListener(new TicTacToeGame());
+		button15.addActionListener(new fourByFourT());
 		panelTTT.add(button15);
 		
 		button16 = new JButton("");
 		button16.setBounds(463, 463, 150, 150);
-		button16.addActionListener(new TicTacToeGame());
+		button16.addActionListener(new fourByFourT());
 		panelTTT.add(button16);
 		
 		instru1 = new JLabel("You are Player 1. Your buddy is Player 2. Player 1 should win.");
@@ -464,22 +464,22 @@ public class TicTacToeGame implements ActionListener {
 		} else if (whoWon().equals("no one")) {
 			
 		} else {
-			button1.removeActionListener(new TicTacToeGame());
-			button2.removeActionListener(new TicTacToeGame());
-			button3.removeActionListener(new TicTacToeGame());
-			button4.removeActionListener(new TicTacToeGame());
-			button5.removeActionListener(new TicTacToeGame());
-			button6.removeActionListener(new TicTacToeGame());
-			button7.removeActionListener(new TicTacToeGame());
-			button8.removeActionListener(new TicTacToeGame());
-			button9.removeActionListener(new TicTacToeGame());
-			button10.removeActionListener(new TicTacToeGame());
-			button11.removeActionListener(new TicTacToeGame());
-			button12.removeActionListener(new TicTacToeGame());
-			button13.removeActionListener(new TicTacToeGame());
-			button14.removeActionListener(new TicTacToeGame());
-			button15.removeActionListener(new TicTacToeGame());
-			button16.removeActionListener(new TicTacToeGame());
+			button1.removeActionListener(new fourByFourT());
+			button2.removeActionListener(new fourByFourT());
+			button3.removeActionListener(new fourByFourT());
+			button4.removeActionListener(new fourByFourT());
+			button5.removeActionListener(new fourByFourT());
+			button6.removeActionListener(new fourByFourT());
+			button7.removeActionListener(new fourByFourT());
+			button8.removeActionListener(new fourByFourT());
+			button9.removeActionListener(new fourByFourT());
+			button10.removeActionListener(new fourByFourT());
+			button11.removeActionListener(new fourByFourT());
+			button12.removeActionListener(new fourByFourT());
+			button13.removeActionListener(new fourByFourT());
+			button14.removeActionListener(new fourByFourT());
+			button15.removeActionListener(new fourByFourT());
+			button16.removeActionListener(new fourByFourT());
 			
 			whosturn.setText(whoWon() + " won!!!!!!!!!!!!!!!");
 			if (whoWon().equals("Player 1")) {
@@ -502,7 +502,7 @@ public class TicTacToeGame implements ActionListener {
 			button.setBackground(Color.RED);
 			button.setForeground(Color.WHITE);
 			button.setBorderPainted(false);
-			button.removeActionListener(new TicTacToeGame());
+			button.removeActionListener(new fourByFourT());
 		} else {
 			isPlayer1 = true;
 			if (!(gameEnded)) {
@@ -514,7 +514,7 @@ public class TicTacToeGame implements ActionListener {
 			button.setBackground(Color.BLUE);
 			button.setForeground(Color.WHITE);
 			button.setBorderPainted(false);
-			button.removeActionListener(new TicTacToeGame());
+			button.removeActionListener(new fourByFourT());
 		}
 //		if (!(gameEnded)) {
 //			if (isPlayer1) {
@@ -526,7 +526,7 @@ public class TicTacToeGame implements ActionListener {
 //				button.setBackground(Color.RED);
 //				button.setForeground(Color.WHITE);
 //				button.setBorderPainted(false);
-//				button.removeActionListener(new TicTacToeGame());
+//				button.removeActionListener(new fourByFourT());
 //			} else {
 //				isPlayer1 = true;
 //				whosturn.setText("Player 1, please choose");
@@ -536,7 +536,7 @@ public class TicTacToeGame implements ActionListener {
 //				button.setBackground(Color.BLUE);
 //				button.setForeground(Color.WHITE);
 //				button.setBorderPainted(false);
-//				button.removeActionListener(new TicTacToeGame());
+//				button.removeActionListener(new fourByFourT());
 //			}
 //		}
 	}
