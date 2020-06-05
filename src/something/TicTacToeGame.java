@@ -1,4 +1,4 @@
-package nothing;
+package something;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.border.Border;
 
 import gamesAllTogether.MemoryGame;
-import gamesAllTogether.somethingWeird;
+import gamesAllTogether.MainClass;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -241,7 +241,7 @@ public class TicTacToeGame implements ActionListener {
 		////////
 		nextButton = new JButton("Next");
 		nextButton.setBounds(10, 655, 100, 35);
-		nextButton.addActionListener(new somethingWeird());
+		nextButton.addActionListener(new MainClass());
 		panelTTT.add(nextButton);
 		nextButton.setVisible(false);
 		////////
