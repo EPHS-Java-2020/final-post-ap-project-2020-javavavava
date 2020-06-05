@@ -76,7 +76,7 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 
 		panelLast.setLayout(null);
 		
-		JLabel Last1 = new JLabel("So, you've made it!!!!!!!");
+		JLabel Last1 = new JLabel("So, you've made it!!!!!!! Here's your shell!!");
 		Last1.setBounds(10, 35, 500, 25);
 		panelLast.add(Last1);
 		
@@ -1318,8 +1318,8 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 			finalSay1.setVisible(true);
 
 			if (count >= 8) {
-				finalSay2.setText("YOU EARNED THE SHELL AFTER ALL!");
-				finalSay3.setText("Here's your shell. You will be able to breathe underwater forever.");
+				finalSay2.setText("Well, well, well. You are smart enough to be worthy of the shell.");
+				finalSay3.setText("Click the \"Next\" button to go to the next level.");
 				finalSay2.setVisible(true);
 				finalSay3.setVisible(true);
 				nextButton.setVisible(true);
