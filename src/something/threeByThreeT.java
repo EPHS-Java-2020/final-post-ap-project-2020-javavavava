@@ -1,3 +1,5 @@
+package something;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.geom.*;
@@ -5,7 +7,7 @@ import javax.swing.*;
 import javax.swing.event.*;
 import java.util.Random;
 
-public class TicTacToe extends JFrame implements ChangeListener, ActionListener {
+public class threeByThreeT extends JFrame implements ChangeListener, ActionListener {
   private JSlider slider;
   private JButton oButton, xButton;
   private Board board;
@@ -20,11 +22,11 @@ public class TicTacToe extends JFrame implements ChangeListener, ActionListener 
 
   // Start the game
   public static void main(String args[]) {
-    new TicTacToe();
+    new threeByThreeT();
   }
 
   // Initialize
-  public TicTacToe() {
+  public threeByThreeT() {
     super("Tic Tac Toe demo");
     JPanel topPanel=new JPanel();
     topPanel.setLayout(new FlowLayout());

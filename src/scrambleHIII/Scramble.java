@@ -1,3 +1,4 @@
+//BAHAHAHA IM FUCKING DONE THIS TOOK ME ME FUCKING 12 sHOURS REEEEE
 package scrambleHIII;
 
 import java.awt.Rectangle;
@@ -41,13 +42,13 @@ public class Scramble implements ActionListener {
 
 	private static JLabel beginningDirectionsLabel3 = new JLabel(
 			"Your dive suit will allow you to breathe underwater until you reach "
-					+ "the mermaids in Atlanitis for help.");
+					+ "the mermaids in Atlantis for help.");
 
 	private static JLabel beginningDirectionsLabel4 = new JLabel(
-			"Unfortunately, to get your dive suit, you need to input 12 passwords.");
+			"Unfortunately, to get your dive suit, you need to input 12 passwords! While you have a sheet of paper");
 
 	private static JLabel beginningDirectionsLabel5 = new JLabel(
-			"Luckily, you have a sheet of paper with them, but the words are scrambled for privacy.");
+			"with you, they are all scrambled for privacy reasons. You must unscramble these words to get the passwords.");
 
 	private static JLabel beginningDirectionsLabel6 = new JLabel(
 			"If you get at least " + toWinScore + " correct, you will be granted acccess to your dive suit.");
@@ -82,7 +83,7 @@ public class Scramble implements ActionListener {
 	// Create questions and answers list(scrambled/ unscrambled)
 	public static void startScramble() throws InterruptedException, FileNotFoundException {
 
-		Scanner input = new Scanner(new File("/Users/64000557/git/AarushiMaze/APGame/resources/wordsList.txt"));
+		Scanner input = new Scanner(new File("wordsList.txt"));
 		allWords = new ArrayList<String>();
 		scrambledWords = new ArrayList<String>();
 		unscrambledWords = new ArrayList<String>();
@@ -149,7 +150,7 @@ public class Scramble implements ActionListener {
 	public void initPanels() {
 
 		frame = new JFrame();
-		rect = new Rectangle(700, 400);
+		rect = new Rectangle(800, 400);
 		frame.setBounds(rect);
 		panel = new JPanel();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -169,10 +170,10 @@ public class Scramble implements ActionListener {
 		beginningDirectionsLabel3.setBounds(10, 90, 650, 25);
 		panel.add(beginningDirectionsLabel3);
 
-		beginningDirectionsLabel4.setBounds(10, 110, 500, 25);
+		beginningDirectionsLabel4.setBounds(10, 110, 700, 25);
 		panel.add(beginningDirectionsLabel4);
 
-		beginningDirectionsLabel5.setBounds(10, 130, 550, 25);
+		beginningDirectionsLabel5.setBounds(10, 130, 700, 25);
 		panel.add(beginningDirectionsLabel5);
 
 		beginningDirectionsLabel6.setBounds(10, 150, 550, 25);
@@ -214,20 +215,20 @@ public class Scramble implements ActionListener {
 		panel.add(escapeButton);
 		escapeButton.hide();
 		
-		didEscape1.setBounds(10, 65, 150, 25);
+		didEscape1.setBounds(10, 25, 500, 100);
 		panel.add(didEscape1);
 		didEscape1.hide();
 		
-		didEscape2.setBounds(10, 80, 150, 25);
+		didEscape2.setBounds(10, 80, 500, 25);
 		panel.add(didEscape2);
 		didEscape2.hide();
 
-		nextButton.setBounds(350, 135, 150, 25);
+		nextButton.setBounds(10, 135, 150, 25);
 		nextButton.addActionListener(new Scramble());
 		panel.add(nextButton);
 		nextButton.hide();
 
-		restartButton.setBounds(350, 135, 150, 25);
+		restartButton.setBounds(10, 135, 150, 25);
 		restartButton.addActionListener(new Scramble());
 		panel.add(restartButton);
 		restartButton.hide();
@@ -277,6 +278,7 @@ public class Scramble implements ActionListener {
 			}
 		
 		} else {
+			beginningDirectionsLabel6.hide();
 			scoreNumberLabel.hide();
 			problemNumberLabel.hide();
 			problemLabel.hide();
@@ -290,9 +292,11 @@ public class Scramble implements ActionListener {
 			if(scoreNumber >= toWinScore) {
 				didEscape1.setText("Congrats! You escaped the submarine sucessfully with the dive suit!");
 				didEscape2.setText("Click \"Next\" to proceed in the game.");
+				nextButton.show();
 			} else {
 				didEscape1.setText("Sorry! You were not able to successfully escape the submarine with the dive suit.");
 				didEscape2.setText("Click \"Restart\" to restart the game.");
+				restartButton.show();
 			}
 		}
 	}
@@ -322,5 +326,4 @@ public class Scramble implements ActionListener {
 		String userAnswer = textbox.getText();
 		return userAnswer.equals(unscrambledWords.get(problemNumber - 1));
 	}
-
 }

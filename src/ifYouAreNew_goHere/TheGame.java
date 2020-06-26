@@ -1,4 +1,4 @@
-package gamesAllTogether;
+package ifYouAreNew_goHere;
 
 import java.awt.BasicStroke;
 import java.awt.BorderLayout;
@@ -51,7 +51,7 @@ import scrambleHIII.Scramble;
 
 
 
-public class MainClass extends JFrame implements ActionListener, KeyListener, ChangeListener {
+public class TheGame extends JFrame implements ActionListener, KeyListener, ChangeListener {
 
 	public static void main(String[] args) throws FileNotFoundException, InterruptedException {
 		titlePage();
@@ -90,7 +90,7 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 		
 		lastRestartButton = new JButton("Restart");
 		lastRestartButton.setBounds(9, 120, 160, 35);
-		lastRestartButton.addActionListener(new MainClass());
+		lastRestartButton.addActionListener(new TheGame());
 		panelLast.add(lastRestartButton);
 		
 		frameLast.setVisible(true);
@@ -264,7 +264,7 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 		panelSSS.add(beginningDirectionsLabel6);
 
 		startGameButton.setBounds(10, 180, 150, 25);
-		startGameButton.addActionListener(new MainClass());
+		startGameButton.addActionListener(new TheGame());
 		panelSSS.add(startGameButton);
 
 		// after START GAME button clicked
@@ -289,13 +289,13 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 		textbox.hide();
 
 		submitButton.setBounds(350, 135, 150, 25);
-		submitButton.addActionListener(new MainClass());
+		submitButton.addActionListener(new TheGame());
 		panelSSS.add(submitButton);
 		submitButton.hide();
 
 		//END of game controls
 		escapeButton.setBounds(350, 135, 150, 25);
-		escapeButton.addActionListener(new MainClass());
+		escapeButton.addActionListener(new TheGame());
 		panelSSS.add(escapeButton);
 		escapeButton.hide();
 
@@ -309,13 +309,13 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 
 		/////////
 		nextButton.setBounds(10, 135, 150, 25);
-		nextButton.addActionListener(new MainClass());
+		nextButton.addActionListener(new TheGame());
 		panelSSS.add(nextButton);
 		nextButton.setVisible(false);
 		//////////
 
 		restartButton.setBounds(10, 135, 150, 25);
-		restartButton.addActionListener(new MainClass());
+		restartButton.addActionListener(new TheGame());
 		panelSSS.add(restartButton);
 		restartButton.hide();
 
@@ -462,82 +462,82 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 
 		button1 = new JButton("");
 		button1.setBounds(10, 10, 150, 150);
-		button1.addActionListener(new MainClass());
+		button1.addActionListener(new TheGame());
 		panelTTT.add(button1);
 
 		button2 = new JButton("");
 		button2.setBounds(161, 10, 150, 150);
-		button2.addActionListener(new MainClass());
+		button2.addActionListener(new TheGame());
 		panelTTT.add(button2);
 
 		button3 = new JButton("");
 		button3.setBounds(312, 10, 150, 150);
-		button3.addActionListener(new MainClass());
+		button3.addActionListener(new TheGame());
 		panelTTT.add(button3);
 
 		button4 = new JButton("");
 		button4.setBounds(463, 10, 150, 150);
-		button4.addActionListener(new MainClass());
+		button4.addActionListener(new TheGame());
 		panelTTT.add(button4);
 
 		button5 = new JButton("");
 		button5.setBounds(10, 161, 150, 150);
-		button5.addActionListener(new MainClass());
+		button5.addActionListener(new TheGame());
 		panelTTT.add(button5);
 
 		button6 = new JButton("");
 		button6.setBounds(161, 161, 150, 150);
-		button6.addActionListener(new MainClass());
+		button6.addActionListener(new TheGame());
 		panelTTT.add(button6);
 
 		button7 = new JButton("");
 		button7.setBounds(312, 161, 150, 150);
-		button7.addActionListener(new MainClass());
+		button7.addActionListener(new TheGame());
 		panelTTT.add(button7);
 
 		button8 = new JButton("");
 		button8.setBounds(463, 161, 150, 150);
-		button8.addActionListener(new MainClass());
+		button8.addActionListener(new TheGame());
 		panelTTT.add(button8);
 
 		button9 = new JButton("");
 		button9.setBounds(10, 312, 150, 150);
-		button9.addActionListener(new MainClass());
+		button9.addActionListener(new TheGame());
 		panelTTT.add(button9);
 
 		button10 = new JButton("");
 		button10.setBounds(161, 312, 150, 150);
-		button10.addActionListener(new MainClass());
+		button10.addActionListener(new TheGame());
 		panelTTT.add(button10);
 
 		button11 = new JButton("");
 		button11.setBounds(312, 312, 150, 150);
-		button11.addActionListener(new MainClass());
+		button11.addActionListener(new TheGame());
 		panelTTT.add(button11);
 
 		button12 = new JButton("");
 		button12.setBounds(463, 312, 150, 150);
-		button12.addActionListener(new MainClass());
+		button12.addActionListener(new TheGame());
 		panelTTT.add(button12);
 
 		button13 = new JButton("");
 		button13.setBounds(10, 463, 150, 150);
-		button13.addActionListener(new MainClass());
+		button13.addActionListener(new TheGame());
 		panelTTT.add(button13);
 
 		button14 = new JButton("");
 		button14.setBounds(161, 463, 150, 150);
-		button14.addActionListener(new MainClass());
+		button14.addActionListener(new TheGame());
 		panelTTT.add(button14);
 
 		button15 = new JButton("");
 		button15.setBounds(312, 463, 150, 150);
-		button15.addActionListener(new MainClass());
+		button15.addActionListener(new TheGame());
 		panelTTT.add(button15);
 
 		button16 = new JButton("");
 		button16.setBounds(463, 463, 150, 150);
-		button16.addActionListener(new MainClass());
+		button16.addActionListener(new TheGame());
 		panelTTT.add(button16);
 
 		instru1 = new JLabel("You are Player 1. Your buddy is Player 2. Player 1 should win.");
@@ -555,7 +555,7 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 		////////
 		nextButton = new JButton("Next");
 		nextButton.setBounds(10, 655, 100, 35);
-		nextButton.addActionListener(new MainClass());
+		nextButton.addActionListener(new TheGame());
 		panelTTT.add(nextButton);
 		nextButton.setVisible(false);
 		////////
@@ -578,22 +578,22 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 		} else if (whoWon().equals("no one")) {
 
 		} else {
-			button1.removeActionListener(new MainClass());
-			button2.removeActionListener(new MainClass());
-			button3.removeActionListener(new MainClass());
-			button4.removeActionListener(new MainClass());
-			button5.removeActionListener(new MainClass());
-			button6.removeActionListener(new MainClass());
-			button7.removeActionListener(new MainClass());
-			button8.removeActionListener(new MainClass());
-			button9.removeActionListener(new MainClass());
-			button10.removeActionListener(new MainClass());
-			button11.removeActionListener(new MainClass());
-			button12.removeActionListener(new MainClass());
-			button13.removeActionListener(new MainClass());
-			button14.removeActionListener(new MainClass());
-			button15.removeActionListener(new MainClass());
-			button16.removeActionListener(new MainClass());
+			button1.removeActionListener(new TheGame());
+			button2.removeActionListener(new TheGame());
+			button3.removeActionListener(new TheGame());
+			button4.removeActionListener(new TheGame());
+			button5.removeActionListener(new TheGame());
+			button6.removeActionListener(new TheGame());
+			button7.removeActionListener(new TheGame());
+			button8.removeActionListener(new TheGame());
+			button9.removeActionListener(new TheGame());
+			button10.removeActionListener(new TheGame());
+			button11.removeActionListener(new TheGame());
+			button12.removeActionListener(new TheGame());
+			button13.removeActionListener(new TheGame());
+			button14.removeActionListener(new TheGame());
+			button15.removeActionListener(new TheGame());
+			button16.removeActionListener(new TheGame());
 
 			whosturn.setText(whoWon() + " won!!!!!!!!!!!!!!!");
 			if (whoWon().equals("Player 1")) {
@@ -618,7 +618,7 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 			button.setBackground(Color.RED);
 			button.setForeground(Color.WHITE);
 			button.setBorderPainted(false);
-			button.removeActionListener(new MainClass());
+			button.removeActionListener(new TheGame());
 		} else {
 			isPlayer1 = true;
 			if (!(gameEnded)) {
@@ -630,7 +630,7 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 			button.setBackground(Color.BLUE);
 			button.setForeground(Color.WHITE);
 			button.setBorderPainted(false);
-			button.removeActionListener(new MainClass());
+			button.removeActionListener(new TheGame());
 		}
 	}
 	public static boolean isFilled() {
@@ -731,7 +731,7 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 		startButton.setBackground(Color.YELLOW);
 		startButton.setForeground(Color.RED);
 		startButton.setFont(startButtonFont);
-		startButton.addActionListener(new MainClass());
+		startButton.addActionListener(new TheGame());
 
 		titleNamePanel.add(titleNameLabel);
 		con.add(titleNamePanel);
@@ -786,7 +786,7 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 		goButton.setBackground(Color.YELLOW);
 		goButton.setForeground(Color.RED);
 		goButton.setFont(startButtonFont);
-		goButton.addActionListener(new MainClass());
+		goButton.addActionListener(new TheGame());
 		goButtonPanel.add(goButton);
 
 		con.remove(imagePanel);
@@ -931,8 +931,8 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 
 		submitbutton = new JButton("Submit");
 		submitbutton.setBounds(250, 100, 80, 25);
-		submitbutton.addActionListener(new MainClass());
-		answer.addKeyListener(new MainClass());
+		submitbutton.addActionListener(new TheGame());
+		answer.addKeyListener(new TheGame());
 		panelRiddle.add(submitbutton);
 
 		timerRiddle.schedule(taskRiddle, 1000, 1000);
@@ -940,7 +940,7 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 		////////
 		nextButton = new JButton("Next");
 		nextButton.setBounds(10, 100, 100, 35);
-		nextButton.addActionListener(new MainClass());
+		nextButton.addActionListener(new TheGame());
 		panelRiddle.add(nextButton);
 		nextButton.setVisible(false);
 		////////
@@ -1166,7 +1166,7 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 
 		startTheGameButton = new JButton("Start the Game");
 		startTheGameButton.setBounds(9, 235, 160, 35);
-		startTheGameButton.addActionListener(new MainClass());
+		startTheGameButton.addActionListener(new TheGame());
 		panelMemory.add(startTheGameButton);
 
 		listOfWords = new JLabel("");
@@ -1176,7 +1176,7 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 
 		doneMemorizing = new JButton("Done Memorizing");
 		doneMemorizing.setBounds(9, 235, 160, 35);
-		doneMemorizing.addActionListener(new MainClass());
+		doneMemorizing.addActionListener(new TheGame());
 		panelMemory.add(doneMemorizing);
 		doneMemorizing.setVisible(false);
 
@@ -1188,19 +1188,19 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 
 		userText = new JTextField(20);
 		userText.setBounds(80, 345, 165, 35);
-		userText.addKeyListener(new MainClass());
+		userText.addKeyListener(new TheGame());
 		panelMemory.add(userText);
 		userText.setVisible(false);
 
 		checkButton = new JButton("Check if I memorized correctly");
 		checkButton.setBounds(245, 345, 250, 35);
-		checkButton.addActionListener(new MainClass());
+		checkButton.addActionListener(new TheGame());
 		panelMemory.add(checkButton);
 		checkButton.setVisible(false);
 
 		done = new JButton("Done spitting out what I have in my brain");
 		done.setBounds(495, 345, 300, 35);
-		done.addActionListener(new MainClass());
+		done.addActionListener(new TheGame());
 		panelMemory.add(done);
 		done.setVisible(false);
 
@@ -1237,7 +1237,7 @@ public class MainClass extends JFrame implements ActionListener, KeyListener, Ch
 		////////
 		nextButton = new JButton("Next");
 		nextButton.setBounds(10, 550, 150, 35);
-		nextButton.addActionListener(new MainClass());
+		nextButton.addActionListener(new TheGame());
 		panelMemory.add(nextButton);
 		nextButton.setVisible(false);
 		////////

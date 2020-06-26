@@ -41,7 +41,8 @@ public class GameTitleWork {
 		window.setSize(1400, 800);
 		window.getContentPane().setBackground(new Color(0, 105, 148));
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		window.setBackground(new Color(0, 105, 148));
+		window.setContentPane(new JLabel(new ImageIcon("Game.jpg")));
+//		window.setBackground(new Color(0, 105, 148));
 		window.setLayout(new FlowLayout());
 		L1 = new JLabel();
 		window.add(L1);
@@ -78,7 +79,7 @@ public class GameTitleWork {
 		
 		imageLabel = new JLabel();
 		
-		image = new ImageIcon(".//res//Game.jpg");
+		image = new ImageIcon("Game.jpg");
 		
 		imageLabel.setIcon(image);
 		imagePanel.add(imageLabel);
@@ -100,8 +101,8 @@ public class GameTitleWork {
 		startButtonPanel.setVisible(false); 
 		
 		startScreenPanel = new JPanel();
-		startScreenPanel.setBounds(100, 100, 800, 600);
-		startScreenPanel.setBackground(new Color(0, 105, 148) );
+		startScreenPanel.setBounds(100, 100, 800, 400);
+		startScreenPanel.setBackground(new Color(0, 105, 148));
 		con.add(startScreenPanel);
 		
 		startScreenText = new JTextArea("\"Hello There\" Welcome to Jumanjee 5 where this time it is underwater\n"
@@ -115,6 +116,7 @@ public class GameTitleWork {
 		startScreenText.setFont(startScreenFont);
 		startScreenText.setLineWrap(true);
 		startScreenPanel.add(startScreenText);
+		startScreenText.setVisible(true);
 		startScreenText.setEditable(false);
 		
 		goButtonPanel = new JPanel();
@@ -127,6 +129,8 @@ public class GameTitleWork {
 		goButton.setForeground(Color.RED);
 		goButton.setFont(startButtonFont);
 		goButtonPanel.add(goButton);
+		
+		con.remove(imagePanel);
 		
 	}
 	
