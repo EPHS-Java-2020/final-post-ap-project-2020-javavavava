@@ -1,6 +1,23 @@
-# final-dix-sept-erledigt
+# Jumanjee 5
 2020 Final Team Project
 
+Our Jumanjee 5 is a story-driven game where a user has to win multiple games in order to escape the maze.
+Please see UI_1 through UI_9. Those are the screenshots of our game.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* I want to keep this regardless of this portfolio (This is kind of meaningful) *
 (Say your name and what thing you're doing in the project)
 
 Omg hi this is aarushi and im trying to figure out how commits work but im pretty sure this is how you do it. Also Im doing the scramble word part in our game! 
