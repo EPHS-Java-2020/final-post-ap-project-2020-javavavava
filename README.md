@@ -2,6 +2,7 @@
 2020 Final Team Project
 
 Our Jumanjee 5 is a story-driven game where a user has to win multiple games in order to escape the maze.
+
 Please see UI_1 through UI_9. Those are the screenshots of our game.
 
 
