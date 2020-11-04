@@ -1,5 +1,5 @@
 # Jumanjee 5
-2020 Final Team Project
+2020 Java Final Team Project
 
 Our Jumanjee 5 is a story-driven game where a user has to win multiple games in order to escape the maze.
 
