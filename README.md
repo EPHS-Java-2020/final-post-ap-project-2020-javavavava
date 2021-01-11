@@ -18,7 +18,7 @@ Please see UI_1 through UI_9. Those are the screenshots of our game.
 
 
 
-*(I want to keep this (This is kind of meaningful))*
+*(I want to keep this (This is meaningful))*
 
 ~~(Say your name and what thing you're doing in the project)~~
 
