@@ -3,7 +3,15 @@
 
 Our Jumanjee 5 is a story-driven game where a user has to win multiple games in order to escape the maze.
 
-Please see UI_1 through UI_9. Those are the screenshots of our game.
+<img src="Jumanjee5_Screenshots/Jumanjee5_1.png">
+<img src="Jumanjee5_Screenshots/2.png">
+<img src="Jumanjee5_Screenshots/3.png">
+<img src="Jumanjee5_Screenshots/4.png">
+<img src="Jumanjee5_Screenshots/5.png">
+<img src="Jumanjee5_Screenshots/6.png">
+<img src="Jumanjee5_Screenshots/7.png">
+<img src="Jumanjee5_Screenshots/8.png">
+<img src="Jumanjee5_Screenshots/9.png">
 
 
 
